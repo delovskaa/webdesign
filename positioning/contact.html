@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact</title>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+</head>
+<style>
+    .top{
+        background: white !important;
+        border: none !important;
+    }
+    .content
+    {
+        margin-top: 8px !important;
+        margin-bottom: 8px !important;
+    }
+    .logodiv
+    {
+        float: left;
+        clear: both;
+        margin-left:100px;
+        position: relative;
+        display: block;
+    }
+    .logoimg{
+        margin:0;
+        margin:0;
+        cursor: pointer;
+    }
+    .topnav
+    {
+        float: right;
+        width: 50%;
+        top: 0;
+        margin: 10px 50px 10px 0;
+        display: block;
+    }
+    .topnav a{
+        margin: 0 40px 0 0;
+        cursor: pointer;
+        text-decoration:none;
+        color: darkgrey;
+    }
+    .topnav a.active {
+        background-color: white;
+        color: lightgreen;
+    }
+    .topnav-right {
+        float: right;
+        margin: 10px 10px 10px 0;
+    }
+    .topnav-centered a {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+        padding: 60px 50px 0px 0px;
+    }
+    hr{
+        display: block;
+        clear: both;
+    }
+    .content-mid{
+        width: 100%;
+        text-align: center;
+    }
+    .content-mid1{
+        background-color: #3f48cc;
+        min-height: 270px;
+        width: 100%;
+    }
+    .content-mid2{
+        background-color: #3cb371;
+        min-height: 330px;
+        width: 100%;
+        margin-top: 20px;
+    }
+    .content-mid1 .text{
+        float: left;
+        color: white;
+        padding: 30px 30px 30px 150px;
+        width: 500px;
+        font-size: 22px;
+        text-align: left;
+    }
+    .content-mid1 .imgright{
+        top:0;
+        float: right;
+        margin-right: 300px;
+    }
+    .content-mid2 .left{
+        float:left;
+        padding: 40px 40px 10px 40px;
+    }
+    .content-mid2 .left .img{
+        float: left;
+        padding-right: 30px;
+    }
+    .content-mid2 .left .img img{
+        border-radius: 15px;
+    }
+    .content-mid2 .right{
+        float:right;
+        padding: 0 40px 40px 40px;
+    }
+    .content-mid2 .right .img{
+        float:right;
+    }
+    .content-mid2 .right .img img{
+        border-radius: 15px;
+    }
+    .content-mid2 .left .text{
+        text-align: left;
+        width: 80%;
+        float: left;
+    }
+    .content-mid2 .right .text{
+        text-align: left;
+        width: 80%;
+        float: left;
+    }
+    .bottom .footer{
+        float: left;
+        font-size: 13px;
+        padding: 10px 0 10px 50px;
+    }
+    .bottom .bottom-menu{
+        float: right;
+        width: 25%;
+        top: 0;
+        margin: 10px 50px 10px 0;
+        display: block;
+    }
+    .bottom .bottom-menu a{
+        transform: none;
+        pointer: cursor !important;
+        text-decoration:none;
+        color: darkgrey;
+        padding-right: 40px;
+    }
+    .bottom .bottom-menu a.active{
+        color: lightgreen;
+        pointer: cursor;
+    }
+    .bottom .clear{
+        clear: both;
+    }
+    .content-top{
+        background-color: #34eb95;
+        display: block;
+        min-height: 50px;
+    }
+    .content-top .title{
+        color: white;
+        font-size: 26px;
+        float: left;
+        margin: 10px 0 10px 100px;
+    }
+    .content-top .bar{
+        color: white;
+        font-size: 13px;
+        float: right;
+        margin: 16px 100px 10px 0;
+    }
+    .content-top .bar a{
+        text-decoration: none;
+        cursor: pointer;
+        color: white;
+        font-size: 13px;
+    }
+    .content-bottom{
+        background-color: #d7dedb;
+        margin: 10px 0 0 0;
+        text-align: left;
+        padding: 30px 0 20px 30px;
+        min-height: 600px;
+    }
+    .content-bottom .title{
+        width: 60%;
+        color: white;
+        text-align: left;
+        font-size: 35px;
+        float:left;
+    }
+    .content-bottom .sub-title{
+        width:60%;
+        text-align: left;
+        color: black;
+        font-size: 16px;
+        font-weight: bold;
+        padding: 10px 0 10px 0;
+        float:left;
+    }
+    .content-bottom .div-p{
+        display: block;
+        margin: 20px 0 0 0;
+        font-size: 15px;
+        width: 60%;
+        float:left;
+    }
+    .content-bottom .map
+    {
+        float: right;
+        margin-right: 30px;
+        margin-top: -180px;
+        top:0;
+    }
+    .content-bottom .after-map
+    {
+        clear: both;
+        float: right;
+        margin-right: 30px;
+        margin-top: 10px;
+        min-height: 50px;
+        width: 300px;
+    }
+
+</style>
+<body>
+<div class="top">
+    <div class="content">
+        <!-- Top navigation -->
+        <div class="logodiv">
+            <img src="finki-logo-9-en.png" class="logoimg" />
+        </div>
+        <div class="topnav">
+            <!-- Right-aligned links -->
+            <div class="topnav-right">
+                <a href="index.html">HOME</a>
+                <a class="ab" href="about-us.html">ABOUT US</a>
+                <a href="contact.html" class="active">CONTACT</a>
+            </div>
+        </div>
+    </div>
+</div>
+<hr />
+<div class="content-mid">
+    <div class="content-top">
+        <div class="title">Contact</div>
+        <div class="bar">
+            Home / Contact
+        </div>
+    </div>
+    <div class="content-bottom">
+        <div class="title" > Get in touch</div>
+        <div class="sub-title">Contact content</div>
+        <div class="div-p">Bacon ipsum dolor sit amet nulla ham qui sint axercitation eismod commodo, chuck duis velit. Aute in reprehenderit, <br>dolore aliqua non est magna in labore pig pork biltong. Eiusmod swine spare ribs reprehenderit cilpa . Boudin aliqua <br> adipisising rump corned beef. </div>
+        <div class="div-p">Pork drumstick rutkey fudiat.Tri-tip elit turducken pork chop in. Swine short ribs meatball irure bacon nulla pork belly <br> cupidatat meatloaf cow. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla <br> nostrud pastrami.</div>
+        <div class="map">
+            <div id="map" style="width:600px;height:300px"></div>
+
+            <script>
+                var mapCanvas = document.getElementById("map");
+                var mapOptions = {
+                    center: new google.maps.LatLng(51.5, -0.2), zoom: 10
+                }
+                var map = new google.maps.Map(mapCanvas, mapOptions);
+            </script>
+
+        </div>
+        <div class="after-map">
+            <br>
+            <br>
+            MAP<br>
+            Awesome Street, number 21<br>Skopje,1000, Macedonia
+        </div>
+    </div>
+</div>
+<hr />
+<div class="bottom">
+    <div class="footer">
+        @ 2019. Faculty of Computer Science and Engineering, Skopje
+    </div>
+    <div class="bottom-menu">
+        <a href="index.html">HOME</a>
+        <a href="about-us.html">ABOUT US</a>
+        <a href="contact.html" class="active">CONTACT</a>
+    </div>
+    <div class="clear" />
+</div>
+</body>
+</html>
+
